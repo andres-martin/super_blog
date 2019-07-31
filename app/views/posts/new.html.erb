@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 offset-sm-3">
+      <h1>Create a new Post</h1>
+      <%= form_for @post do |f|%>
+        <div class="form-group">
+          <%= f.text_field :title, class: "form-control input-lg", placeholder: "Enter your post's title" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_area :content, class: "form-control", 
+          placeholder: "Type your thoughts", rows: 5, data: {provide: "markdown"}%>
+        </div>
+        <div>
+          <%= f.submit "Publish your Post", class: "btn btn-primary btn-block btn-lg"%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
