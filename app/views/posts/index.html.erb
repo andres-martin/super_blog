@@ -9,6 +9,7 @@
       <% @posts.each do |post| %>
         <h2><%= link_to post.title, post %></h2>
         <p><%= post.content %></p>
+        <p><%= link_to "edit", edit_post_path(post) %></p>
       <% end %>
     </div>
   </div>
