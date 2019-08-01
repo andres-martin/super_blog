@@ -2,6 +2,10 @@
   <div class="row">
     <div class="col-sm-12">
       <h1>Posts</h1>
+      <div class="text-right">
+        <%= link_to 'Create a new Post', new_post_path,
+         class: "btn btn-primary" %>
+      </div>
       <% @posts.each do |post| %>
         <h2><%= post.title %></h2>
         <p><%= post.content %></p>
