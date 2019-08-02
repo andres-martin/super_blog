@@ -1,7 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-12">
-      <h1>Posts</h1>
+    <div class="col-sm-12 mt-5">
       <% if signed_in? %>
         <div class="text-right">
           <%= link_to 'Create a new Post', new_post_path,
@@ -10,10 +9,11 @@
       <% end %>
       <% @posts.each do |post| %>
         <h2><%= link_to post.title, post %></h2>
-        <p><%= post.content %></p>
-        <div>
-          <%= post.comments.count %>
-        </div>
+        <p>Published by <%= post.user.email %></p>
+        <p><%= post.content %>
+          <span>
+            <%= post.comments.count %>
+          </span></p>
         <div>
           <% if signed_in? && current_user == post.user %>
             <%= link_to "edit", edit_post_path(post) %>
