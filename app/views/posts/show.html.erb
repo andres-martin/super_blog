@@ -3,6 +3,27 @@
     <div class="col-sm-12">
       <h1><%= @post.title %></h1>
       <p><%= @post.content %></p>
+      <div class="comments">
+        <% @post.comments.each do |comment| %>
+          <div class="card border-success">
+            <div class="card-header">
+              <%= comment.user.email %>
+            </div>
+            <div class="card-body"><%= comment.body %></div>
+          </div>
+        <% end %>
+        <% if signed_in? %>
+          <h4>New comment</h4>
+          <%= form_for [@post, @post.comments.build] do |f|%>
+            <div class="form-group">
+              <%= f.text_area :body, class: "form-control", placeholder: "comment below"%>
+            </div>
+            <div class="actions">
+              <%= f.submit "Comment", class: "btn btn-primary" %>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
