@@ -13,4 +13,9 @@
 class User < ApplicationRecord
     # has_many :posts
     has_secure_password validations: false
+
+    validates :name, presence: true
+    validates :email, uniqueness: true, format: /@/
+    validates :password, presence: true, on: :create
+    validates :password, length: {minimum:6, maximum:20}, allow_nil: true
 end
