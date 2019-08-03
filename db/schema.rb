@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 2019_08_02_174240) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+    t.string "name", limit: 100
+    t.string "email", limit: 100
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
