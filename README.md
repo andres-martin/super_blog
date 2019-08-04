@@ -24,10 +24,12 @@ Things you may want to cover:
 * ...
 
 
-# Super Blog 600 puntos
+# Super Blog 
 
-Hola Maker,
+Proyecto hechoe ne Rails 5, el proyectos se basa en crear un blog, con usuarios autenticados, donde puedan crear posts y comentar:
 
+
+----------------------------------------
 Para este proyecto vas a construir un blog en Ruby on Rails. Es un blog colaborativo en donde cualquier persona puede registrarse y publicar nuevos posts.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pXrtPf0vmnw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
