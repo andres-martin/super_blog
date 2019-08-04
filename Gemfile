@@ -13,6 +13,9 @@ gem 'puma', '~> 3.11'
 # Boostrap 4 gem
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+
+gem 'redcarpet'
+gem 'coderay'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
