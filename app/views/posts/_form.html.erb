@@ -17,7 +17,7 @@
           <%= f.text_field :title, class: "form-control input-lg", placeholder: "Ingresa el título del post" %>
         </div>
         <div class="form-group">
-          <%= f.label :content, "Contenido" %>
+          <%= f.label :content, "Contenido (250 caracteres mínimo)" %>
           <%= f.text_area :content, class: "form-control", 
           placeholder: "Escribe tus ideas...", rows: 10, data: {provide: "markdown"}%>
         </div>

@@ -2,14 +2,16 @@ es:
   errors:
     messages:
       blank: "no puede estar en blanco"
-      too_short: "debe tener minimo (250 caracteres)"
+      too_short: "no posee el largo mínimo"
       invalid: "campo es inválido"
+      confirmation: "no coincide"
 
   activerecord:
     attributes:
       user:
         name: "Nombre"
         password: "Contraseña"
+        password_confirmation: "confirmación contraseña"
       post:
         title: "Titulo"
         content: "Contenido"    
