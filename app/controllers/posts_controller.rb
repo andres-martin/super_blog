@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :private_access, except: [:index, :show]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order('created_at DESC')
   end
 
   def new
@@ -13,7 +13,8 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user = current_user
     if @post.save 
-      redirect_to posts_path, notice: "Post successully published"
+      flash[:success] = "Post successully published"
+      redirect_to posts_path 
     else
       render :new
     end
@@ -30,7 +31,8 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      redirect_to posts_path, notice: "Post modified successfully"
+      flash[:success] = "Post modified successfully"
+      redirect_to posts_path
     else
       render :edit
     end
@@ -39,8 +41,8 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-
-    redirect_to posts_path, notice: "Post successfully deleted"
+    flash[:info] = "Post successfully deleted"
+    redirect_to posts_path 
   end
     
   private
