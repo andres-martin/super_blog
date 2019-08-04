@@ -1,0 +1,57 @@
+es:
+  errors:
+    messages:
+      blank: "no puede estar en blanco"
+      too_short: "debe tener minimo (250 caracteres)"
+      invalid: "campo es inválido"
+
+  activerecord:
+    attributes:
+      user:
+        name: "Nombre"
+        password: "Contraseña"
+      post:
+        title: "Titulo"
+        content: "Contenido"    
+
+  datetime:
+      distance_in_words:
+        about_x_hours:
+          one: alrededor de una hora
+          other: alrededor de %{count} horas
+        about_x_months:
+          one: alrededor de un mes
+          other: alrededor de %{count} meses
+        about_x_years:
+          one: alrededor de un año
+          other: alrededor de %{count} años
+        almost_x_years:
+          one: hace casi un año
+          other: hace casi %{count} años
+        half_a_minute: hace medio minuto
+        less_than_x_minutes:
+          zero: hace menos de un minuto
+          one: hace menos de un minuto
+          other: hace menos de %{count} minutos
+        less_than_x_seconds:
+          zero: menos de un segundo
+          one: menos de un segundo
+          other: menos de %{count} segundos
+        over_x_years:
+          one: mas de un año
+          other: mas de %{count} años
+        x_days:
+          one: 1 día
+          other: "%{count} dias"
+        x_minutes:
+          one: hace 1 minuto
+          other: hace %{count} minutos
+        x_months:
+          one: 1 mes
+          other: "%{count} meses"
+        x_years:
+          one: un año
+          other: "%{count} años"
+        x_seconds:
+          one: 1 segundo
+          other: "%{count} segundos"    

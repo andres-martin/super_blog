@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user = current_user
     if @post.save 
-      flash[:success] = "Post successully published"
+      flash[:success] = "Post publicado con éxito"
       redirect_to posts_path 
     else
       render :new
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      flash[:success] = "Post modified successfully"
+      flash[:success] = "Post modificado con éxito"
       redirect_to posts_path
     else
       render :edit
@@ -41,7 +41,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    flash[:info] = "Post successfully deleted"
+    flash[:info] = "Post eliminado con éxito"
     redirect_to posts_path 
   end
     

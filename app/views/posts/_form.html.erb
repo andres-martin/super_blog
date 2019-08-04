@@ -13,13 +13,13 @@
       <% end %>
       <%= form_for @post do |f|%>
         <div class="form-group">
-          <%= f.label :title, "Title" %>
-          <%= f.text_field :title, class: "form-control input-lg", placeholder: "Enter your post's title" %>
+          <%= f.label :title, "Título" %>
+          <%= f.text_field :title, class: "form-control input-lg", placeholder: "Ingresa el título del post" %>
         </div>
         <div class="form-group">
-          <%= f.label :content, "Content" %>
+          <%= f.label :content, "Contenido" %>
           <%= f.text_area :content, class: "form-control", 
-          placeholder: "Type in your thoughts...", rows: 10, data: {provide: "markdown"}%>
+          placeholder: "Escribe tus ideas...", rows: 10, data: {provide: "markdown"}%>
         </div>
         <div>
           <%= f.submit form_submit, class: "btn btn-primary btn-block btn-lg"%>

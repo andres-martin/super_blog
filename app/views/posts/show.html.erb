@@ -1,26 +1,26 @@
 <div class="container mt-4">
   <div class="row">
     <div class="col-sm-10 offset-sm-1">
-      <%= link_to 'Go back', root_path %>
+      <%= link_to 'Volver', root_path %>
       <h1><%= markdown(@post.title) %></h1>
       <p class="mb-5"><%= markdown(@post.content) %></p>
       <div class="comments">
         <% @post.comments.each do |comment| %>
           <div class="card mb-3">
             <div class="card-header p-2">
-              <span><%= comment.user.email %> commented <%= time_ago_in_words(comment.created_at) %> ago</span>
+              <span><%= comment.user.email %> comentó <%= time_ago_in_words(comment.created_at) %></span>
             </div>
             <div class="card-body p-2"><%= comment.body %></div>
           </div>
         <% end %>
         <% if signed_in? %>
-          <h5 class="mt-3">New comment</h5>
+          <h5 class="mt-3">Nuevo comentario</h5>
           <%= form_for [@post, @post.comments.build] do |f|%>
             <div class="form-group">
-              <%= f.text_area :body, class: "form-control", placeholder: "comment below"%>
+              <%= f.text_area :body, class: "form-control", placeholder: "Ingresa tu comentario"%>
             </div>
             <div class="actions mb-4">
-              <%= f.submit "Comment", class: "btn btn-primary" %>
+              <%= f.submit "Comentar", class: "btn btn-primary" %>
             </div>
           <% end %>
         <% end %>
